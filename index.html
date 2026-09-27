@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the Chrome extension YT Filter — Just Keywords.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy — YT Filter — Just Keywords</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --border: #d1d9e0;
+      --surface: #f6f8fa;
+      --link: #0969da;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --muted: #9198a1;
+        --border: #3d444d;
+        --surface: #151b23;
+        --link: #4493f8;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Thai", sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0 0 0.25rem;
+      font-size: 2rem;
+      line-height: 1.25;
+    }
+
+    .product {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .meta {
+      margin: 0.5rem 0 0;
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+
+    h2 {
+      margin: 2rem 0 0.5rem;
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    p,
+    ul {
+      margin: 0 0 1rem;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    .summary {
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+    }
+
+    .summary p:last-child,
+    .summary ul:last-child {
+      margin-bottom: 0;
+    }
+
+    code {
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      background: var(--surface);
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9em;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--link);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding-top: 1.75rem;
+      }
+
+      h1 {
+        font-size: 1.625rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="product">YT Filter — Just Keywords</p>
+      <p class="meta">Effective date and last updated: <time datetime="2026-09-27">September 27, 2026</time></p>
+    </header>
+
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <ul>
+        <li>The extension stores only your keyword list and your chosen interface language, in your own browser.</li>
+        <li>It reads video titles and descriptions shown on YouTube video cards only to compare them with your keywords, inside your browser.</li>
+        <li>It makes no network requests. No information leaves your browser, and nothing is sold or shared.</li>
+      </ul>
+    </section>
+
+    <h2>What the extension does</h2>
+    <p>YT Filter — Just Keywords is a Chrome extension that hides YouTube videos when a keyword you add appears in the video's title, or in the description text shown on the video card. It runs only on <code>https://www.youtube.com/</code>.</p>
+
+    <h2>Information the extension accesses</h2>
+    <p>On www.youtube.com pages, the extension reads the following page content that YouTube already displays in your browser:</p>
+    <ul>
+      <li><strong>Video titles</strong> of video cards on the page.</li>
+      <li><strong>Description text shown on a video card</strong>, where YouTube displays it (mostly in search results). The extension does not fetch full video descriptions.</li>
+      <li><strong>Page layout information</strong> (for example, how many videos YouTube shows per row), used to arrange the remaining videos after matching videos are hidden.</li>
+      <li>Whether <strong>you click the "Show less" button of a shelf</strong> (such as "Breaking news"), so the extension does not re-expand a shelf you collapsed yourself. This is kept only in the page's memory and is not stored.</li>
+    </ul>
+    <p>This content is processed only inside your browser to decide which video cards to hide. It is not stored and is not sent anywhere.</p>
+
+    <h2>Information the extension stores</h2>
+    <p>The extension uses the Chrome storage API (<code>chrome.storage.local</code>) to store exactly two settings in your browser:</p>
+    <ul>
+      <li><strong>keywords</strong> — the words you add in the extension popup.</li>
+      <li><strong>language</strong> — the interface language (Thai or English), saved only if you choose it with the TH | EN buttons.</li>
+    </ul>
+    <p>These settings are not synced to other devices by the extension. You can remove a keyword at any time with the × button. Chrome removes the extension's local storage when you uninstall the extension.</p>
+
+    <h2>How keyword settings are handled</h2>
+    <p>When you add or remove a keyword in the popup, the updated list is saved to <code>chrome.storage.local</code>. The extension's script on YouTube reads this list and applies it to the page right away. Keywords are used only for matching against video titles and card descriptions.</p>
+
+    <h2>How YouTube titles and descriptions are processed</h2>
+    <p>For each video card, the extension compares the title and any card description text with your keywords (case-insensitive text matching). If a keyword is found, the card is hidden on the page. Channel names are not checked. To keep shelves such as "Breaking news" tidy, the extension may click YouTube's own "Show more" or "Show less" buttons on the page. The extension does not call any YouTube or Google API.</p>
+
+    <h2>Information transmitted outside your browser</h2>
+    <p>None. The extension makes no network requests and contains no code that sends data to the developer, to YouTube, or to any other party.</p>
+
+    <h2>Personal information</h2>
+    <p>The extension does not collect personal information, account or login information, authentication data, browsing history, watch history, location, or usage statistics.</p>
+
+    <h2>Selling and sharing of data</h2>
+    <p>The extension does not sell, share, or transfer any data to third parties.</p>
+
+    <h2>Third-party services</h2>
+    <p>The extension does not use any third-party services, including analytics, telemetry, crash reporting, advertising, or tracking services. It does not load remote code; all of its code is included in the extension package.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>storage</strong> — to save your keywords and language preference locally.</li>
+      <li><strong>Access to <code>https://www.youtube.com/*</code></strong> (content script) — to hide matching videos on YouTube. The extension does not run on any other website.</li>
+    </ul>
+
+    <h2>Privacy approach</h2>
+    <p>The extension is designed to work locally: it requests only the <code>storage</code> permission, runs only on www.youtube.com, processes page content inside your browser, and does not transmit data.</p>
+
+    <h2>Changes to this Privacy Policy</h2>
+    <p>If the extension's data practices change, this page will be updated and the date at the top of this page will be revised.</p>
+
+    <h2>Contact</h2>
+    <p>QSS — <a href="mailto:tk7013@gmail.com">tk7013@gmail.com</a></p>
+
+    <footer>
+      <p>YT Filter — Just Keywords is an independent tool and is not affiliated with or endorsed by YouTube or Google.</p>
+    </footer>
+  </main>
+</body>
+</html>
