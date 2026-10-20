@@ -144,35 +144,37 @@
     <header>
       <h1>Privacy Policy</h1>
       <p class="product">YT Filter — Just Keywords</p>
-      <p class="meta">Effective date and last updated: <time datetime="2026-09-27">September 27, 2026</time></p>
+      <p class="meta">Last updated: <time datetime="2026-10-20">October 20, 2026</time></p>
     </header>
 
     <section class="summary" aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
       <ul>
-        <li>The extension stores only your keyword list and your chosen interface language, in your own browser.</li>
-        <li>It reads video titles and descriptions shown on YouTube video cards only to compare them with your keywords, inside your browser.</li>
+        <li>The extension stores only your keyword list, your members-only filter setting, and your chosen interface language, in your own browser.</li>
+        <li>It reads video titles, descriptions, and badges shown on YouTube video cards only to decide which cards to hide, inside your browser.</li>
         <li>It makes no network requests. No information leaves your browser, and nothing is sold or shared.</li>
       </ul>
     </section>
 
     <h2>What the extension does</h2>
-    <p>YT Filter — Just Keywords is a Chrome extension that hides YouTube videos when a keyword you add appears in the video's title, or in the description text shown on the video card. It runs only on <code>https://www.youtube.com/</code>.</p>
+    <p>YT Filter — Just Keywords is a Chrome extension that hides YouTube videos when a keyword you add appears in the video's title, or in the description text shown on the video card. If you turn on the members-only option, it also hides videos that YouTube marks with a "Members only" badge. It runs only on <code>https://www.youtube.com/</code>.</p>
 
     <h2>Information the extension accesses</h2>
     <p>On www.youtube.com pages, the extension reads the following page content that YouTube already displays in your browser:</p>
     <ul>
       <li><strong>Video titles</strong> of video cards on the page.</li>
       <li><strong>Description text shown on a video card</strong>, where YouTube displays it (mostly in search results). The extension does not fetch full video descriptions.</li>
+      <li><strong>Badges shown on a video card</strong>, to detect YouTube's "Members only" badge when the members-only option is on.</li>
       <li><strong>Page layout information</strong> (for example, how many videos YouTube shows per row), used to arrange the remaining videos after matching videos are hidden.</li>
       <li>Whether <strong>you click the "Show less" button of a shelf</strong> (such as "Breaking news"), so the extension does not re-expand a shelf you collapsed yourself. This is kept only in the page's memory and is not stored.</li>
     </ul>
     <p>This content is processed only inside your browser to decide which video cards to hide. It is not stored and is not sent anywhere.</p>
 
     <h2>Information the extension stores</h2>
-    <p>The extension uses the Chrome storage API (<code>chrome.storage.local</code>) to store exactly two settings in your browser:</p>
+    <p>The extension uses the Chrome storage API (<code>chrome.storage.local</code>) to store exactly three settings in your browser:</p>
     <ul>
       <li><strong>keywords</strong> — the words you add in the extension popup.</li>
+      <li><strong>hideMembersOnly</strong> — whether the "Hide members-only videos" option is on (off by default).</li>
       <li><strong>language</strong> — the interface language (Thai or English), saved only if you choose it with the TH | EN buttons.</li>
     </ul>
     <p>These settings are not synced to other devices by the extension. You can remove a keyword at any time with the × button. Chrome removes the extension's local storage when you uninstall the extension.</p>
@@ -181,7 +183,7 @@
     <p>When you add or remove a keyword in the popup, the updated list is saved to <code>chrome.storage.local</code>. The extension's script on YouTube reads this list and applies it to the page right away. Keywords are used only for matching against video titles and card descriptions.</p>
 
     <h2>How YouTube titles and descriptions are processed</h2>
-    <p>For each video card, the extension compares the title and any card description text with your keywords (case-insensitive text matching). If a keyword is found, the card is hidden on the page. Channel names are not checked. To keep shelves such as "Breaking news" tidy, the extension may click YouTube's own "Show more" or "Show less" buttons on the page. The extension does not call any YouTube or Google API.</p>
+    <p>For each video card, the extension compares the title and any card description text with your keywords (case-insensitive text matching). If a keyword is found, the card is hidden on the page. If the members-only option is on, a card that shows YouTube's "Members only" badge is also hidden; the extension does not check your membership status. Channel names are not checked. To keep shelves such as "Breaking news" tidy, the extension may click YouTube's own "Show more" or "Show less" buttons on the page. The extension does not call any YouTube or Google API.</p>
 
     <h2>Information transmitted outside your browser</h2>
     <p>None. The extension makes no network requests and contains no code that sends data to the developer, to YouTube, or to any other party.</p>
@@ -197,7 +199,7 @@
 
     <h2>Permissions</h2>
     <ul>
-      <li><strong>storage</strong> — to save your keywords and language preference locally.</li>
+      <li><strong>storage</strong> — to save your keywords, members-only setting, and language preference locally.</li>
       <li><strong>Access to <code>https://www.youtube.com/*</code></strong> (content script) — to hide matching videos on YouTube. The extension does not run on any other website.</li>
     </ul>
 
